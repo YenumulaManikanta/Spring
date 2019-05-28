@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+        <bean id="department" class="com.pawana.model.Department">
+        	<property name="DeptNo" value="99"/>
+        	<property name="DeptName" value="IT"/>
+        </bean>
+        
+        <bean id="dept" class="com.pawana.model.Department">
+        	<property name="DeptNo" value="99"/>
+        	<property name="DeptName" value="IT"/>
+        </bean>
+        
+        <bean id="emp" class="com.pawana.model.Employee" scope="prototype">
+        	 <property name="id" value="7"/>
+        	<property name="name" value="Krunal"/>
+        	<property name="dept" ref="dept"/> 
+        	
+        </bean>
+        
+    </beans>
